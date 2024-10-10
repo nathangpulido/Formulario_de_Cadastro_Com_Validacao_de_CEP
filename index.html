@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Formulário de cadastro</title>
+    <script src="script.js" defer></script>
 </head>
 <body class="bg" >
     <div class="box">
@@ -40,6 +41,11 @@
                 <div class="inputbox">
                     <label for="data_nascimento" ><strong>Data de Nascimento</strong></label>
                     <input type="date" name="data_nascimento" id="data_nascimento" required>
+                </div>
+                <br><br>
+                <div class="inputbox">
+                    <input type="text" name="cep" id="cep" class="inputuser" required onblur="buscarEndereco()">
+                    <label for="cep" class="labelinput">CEP</label>
                 </div>
                 <br><br>
                 <div class="inputbox">
