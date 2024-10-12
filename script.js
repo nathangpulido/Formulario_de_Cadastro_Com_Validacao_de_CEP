@@ -12,6 +12,7 @@ async function buscarEndereco() {
             document.getElementById('endereco').value = data.logradouro;
             document.getElementById('cidade').value = data.localidade;
             document.getElementById('estado').value = data.uf;
+            document.getElementById('bairro').value = data.bairro;
         }
     } catch (error) {
         document.getElementById('endereco').value = "Erro ao buscar o endereço.";
