@@ -79,6 +79,7 @@ form{
 }
 @media (max-width: 600px){
     .box{
+        display: flex;
         width: 90%;
         height: 20rem;
         padding: 15px;
