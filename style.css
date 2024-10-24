@@ -1,5 +1,6 @@
-body{
-    height: 100%;
+/* Estilos Gerais */
+body {
+    height: 100vh;
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     background-image: url('background4.jpg');
@@ -10,24 +11,27 @@ body{
     align-items: center;
 }
 
-.box{
+/* Estilos para o Container */
+.box {
     display: flex;
     flex-direction: column;
     background-color: rgba(52, 51, 51, 0.834);
     padding: 20px;
     border-radius: 15px;
-    width: 80%;
-    height: 48.5rem;
-    max-width: 400px;
+    width: 70%;
+    max-width: 700px;
     color: white;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.inputbox{
+/* Estilos para Inputs */
+.inputbox {
     position: relative;
-    margin-bottom: 4px;
+    margin-bottom: 20px;  /* Margin para espaçamento */
+    width: 100%;  /* Certifique-se de que todos os elementos ocupem 100% da largura */
 }
-.inputuser{
+
+.inputuser {
     background: none;
     border: none;
     border-bottom: 1px solid white;
@@ -36,24 +40,40 @@ body{
     font-size: 15px;
     width: 100%;
     letter-spacing: 2px;
+    padding: 5px 0;  /* Padding interno para garantir alinhamento */
 }
-.labelinput{
+
+.labelinput {
     position: absolute;
-    top: 0px;
+    top: 10px;
     left: 0px;
     pointer-events: none;
-    transition: .5s;
+    transition: 0.5s;
 }
-.inputuser:focus ~ .labelinput,.inputuser:valid ~ .labelinput{
+
+.inputuser:focus ~ .labelinput,
+.inputuser:valid ~ .labelinput {
     top: -20px;
     font-size: 12px;
     color: #cf5904;
     font-weight: 600;
 }
 
-#data_nascimento{
+/* Estilos para Radio Inputs */
+.input-radio {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.input-radio label {
+    margin-left: 5px;
+}
+
+/* Outros Inputs */
+#data_nascimento {
     border: none;
-    padding: 2px;
+    padding: 5px;  /* Ajustar padding */
     border-radius: 8px;
     outline: none;
     font-size: 15px;
@@ -61,38 +81,45 @@ body{
     width: 100%;
     margin-bottom: 8px;
 }
-#submit{
+
+#submit {
     background-color: white;
     width: 100%;
     border: none;
     padding: 10px;
-    color:black;
+    color: black;
     font-size: 15px;
     cursor: pointer;
     border-radius: 10px;
-} 
-fieldset{
+}
+
+fieldset {
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 100%;
+    height: auto; /* Ajusta a altura conforme o conteúdo */
+    box-sizing: border-box; /* Inclui padding e borda no tamanho total */
+    padding: 10px; /* Adiciona padding */
 }
-@media (max-width: 600px){
-    .box{
-        display: flex;
+
+/* Media Queries para Dispositivos Móveis */
+@media (max-width: 600px) {
+    .box {
         width: 90%;
-        height: 20rem;
         padding: 15px;
+        height: auto; /* Ajusta a altura conforme o conteúdo */
     }
-    .inputuser, 
+
+    .inputuser,
     #data_nascimento,
     #submit {
         font-size: 18px;
     }
-    fieldset{
+
+    fieldset {
         display: flex;
         flex-direction: column;
         width: 100%;
-        height: 100%;
+        height: auto; /* Ajusta a altura conforme o conteúdo */
     }
 }
